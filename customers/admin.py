@@ -11,6 +11,6 @@ class CustomerAdmin(EnabledModelAdmin):
 
 @admin.register(models.Location)
 class LocationAdmin(EnabledModelAdmin):
-    list_display = ('customer', 'lattitude', 'longitude', 'date_created')
+    list_display = ('customer', 'latitude', 'longitude', 'date_created')
     list_filter = ('date_created',)
 

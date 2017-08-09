@@ -15,6 +15,15 @@ dev: build
 	docker run -it -v $(PWD):/usr/src/app -p 8080:8080 $(API_IMAGE_NAME) bash
 
 
+################
+#  OPERATIONS  #
+################
+
+migrate:
+	./manage.py makemigrations
+	./manage.py migrate
+
+
 ##################
 #   DEVELOPMENT  #
 ##################

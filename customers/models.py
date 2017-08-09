@@ -20,11 +20,11 @@ class Customer(BaseModel):
 
 class Location(BaseModel):
     customer = models.ForeignKey(Customer)
-    lattitude = models.DecimalField(max_digits=9, decimal_places=6)
+    latitude = models.DecimalField(max_digits=9, decimal_places=6)
     longitude = models.DecimalField(max_digits=9, decimal_places=6)
 
     def __str__(self):
-        return '{} {},{}'.format(self.customer.full_name, self.lattitude, self.longitude)
+        return '{} {},{}'.format(self.customer.full_name, self.latitude, self.longitude)
 
     class Meta:
         ordering = ['date_created']
