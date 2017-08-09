@@ -1,0 +1,21 @@
+# Django
+django
+django-waffle
+
+djangorestframework
+django-filter
+djangorestframework-camel-case
+
+# Logging
+raven
+
+# Network
+requests
+whitenoise
+
+# Date and time
+pytz
+python-dateutil
+
+# Utilities
+click

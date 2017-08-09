@@ -1,0 +1,34 @@
+# This file pulls in everything a developer needs. If it's a basic package
+# needed to run the site, it belongs in requirements/production.txt. If it's a
+# package for developers (testing, docs, etc.), it goes in this file.
+-r production.txt
+
+# Tools
+ipython
+werkzeug
+pyopenssl
+httpie
+
+# Debugging
+django-debug-toolbar
+ipdb
+
+# Quality
+pylint
+pep8
+
+# Django
+django-extensions
+
+# Docs
+mkdocs
+
+# Testing
+mock
+coverage
+pytest
+pytest-django
+pytest-spec
+pytest-xdist
+model_mommy
+
