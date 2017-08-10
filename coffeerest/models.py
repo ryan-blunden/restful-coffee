@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from django.utils.timesince import timesince
 
+
 from coffeerest.managers import EnabledManager
 
 

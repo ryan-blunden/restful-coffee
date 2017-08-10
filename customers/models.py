@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from rest_framework.authtoken.models import Token
 
 from coffeerest.models import BaseModel
 
@@ -14,8 +15,24 @@ class Customer(BaseModel):
         ordering = ['date_created']
 
     @property
+    def auth_token(self):
+        return Token.objects.get_or_create(user=self.user)
+
+    @property
+    def first_name(self):
+        return self.user.first_name
+
+    @property
+    def full_last(self):
+        return self.user.last_name
+
+    @property
     def full_name(self):
         return '{} {}'.format(self.user.first_name, self.user.last_name)
+
+    @property
+    def email(self):
+        return self.user.email
 
 
 class Location(BaseModel):

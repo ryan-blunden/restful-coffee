@@ -12,5 +12,5 @@ class StoreAdmin(EnabledModelAdmin):
 
 @admin.register(models.Order)
 class OrderAdmin(EnabledModelAdmin):
-    list_display = ('store', 'customer', 'coffee', 'is_complete', 'deleted')
+    list_display = ('store', 'customer', 'order', 'is_complete', 'deleted')
     list_filter = ('date_created', 'is_complete', 'deleted')
